@@ -1,0 +1,61 @@
+package pl.lab.roombooking.service;
+
+import org.springframework.stereotype.Service;
+import pl.lab.roombooking.dto.CreateRoomRequest;
+import pl.lab.roombooking.dto.RoomResponse;
+import pl.lab.roombooking.dto.UpdateRoomRequest;
+import pl.lab.roombooking.model.Room;
+import pl.lab.roombooking.repository.InMemoryRoomRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * Warstwa logiki biznesowej (Service).
+ * Pośredniczy między kontrolerem HTTP a warstwą dostępu do danych (Repository),
+ * mapując encje domenowe na obiekty DTO.
+ */
+@Service
+public class RoomService {
+
+    private final InMemoryRoomRepository roomRepository;
+
+    // Wstrzykiwanie zależności (Dependency Injection) przez konstruktor
+    public RoomService(InMemoryRoomRepository roomRepository) {
+        this.roomRepository = roomRepository;
+    }
+
+    public List<RoomResponse> getAllRooms() {
+        return roomRepository.findAll().stream()
+                .map(RoomResponse::from)
+                .toList();
+    }
+
+    // TODO (Zadanie 1): Pobierz pojedynczą salę na podstawie ID i zmapuj na Optional<RoomResponse>.
+    public Optional<RoomResponse> getRoomById(Long id) {
+        throw new UnsupportedOperationException("TODO: Zaimplementuj getRoomById w Zadaniu 1");
+    }
+
+    // TODO (Zadanie 2): Utwórz nowy obiekt Room na podstawie CreateRoomRequest (available = true),
+    // zapisz go w repozytorium i zwróć RoomResponse.
+    public RoomResponse createRoom(CreateRoomRequest request) {
+        throw new UnsupportedOperationException("TODO: Zaimplementuj createRoom w Zadaniu 2");
+    }
+
+    // TODO (Zadanie 3): Zaktualizuj istniejącą salę o podanym ID danymi z UpdateRoomRequest.
+    // Jeśli sala nie istnieje, zwróć Optional.empty().
+    public Optional<RoomResponse> updateRoom(Long id, UpdateRoomRequest request) {
+        throw new UnsupportedOperationException("TODO: Zaimplementuj updateRoom w Zadaniu 3");
+    }
+
+    // TODO (Zadanie 4): Usuń salę o podanym ID, delegując operację do repozytorium.
+    public boolean deleteRoom(Long id) {
+        throw new UnsupportedOperationException("TODO: Zaimplementuj deleteRoom w Zadaniu 4");
+    }
+
+    // TODO (Zadanie 5): Rozbuduj pobieranie listy sal o opcjonalne filtrowanie
+    // po parametrach minCapacity oraz hasProjector (gdy parametr == null, nie filtruj po nim).
+    public List<RoomResponse> searchRooms(Integer minCapacity, Boolean hasProjector) {
+        return getAllRooms();
+    }
+}
