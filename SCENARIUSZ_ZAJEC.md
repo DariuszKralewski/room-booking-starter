@@ -79,6 +79,6 @@ Wykonaj **Zadanie 1 (`GET /api/rooms/{id}`)** wspólnie ze studentami pokazać p
 1. **„Zmieniłem kod, ale nadal dostaję `500 UnsupportedOperationException`!”**  
    Student dopisał kod w pliku `.java`, ale nie kliknął przycisku **Rerun** w IDE i wciąż wysyła żądania do starej instancji aplikacji.
 2. **Błąd wersji Javy przy kompilacji**  
-   W `pom.xml` ustawiona jest **Java 21**. Jeśli IDE studenta ma domyślnie ustawione starsze Project SDK (np. 17), należy zmienić je w *Project Structure → SDK*.
+   W `pom.xml` ustawiona jest **Java 25**. Jeśli IDE studenta ma domyślnie ustawione starsze Project SDK (np. 21), należy zmienić je w *Project Structure → SDK*.
 3. **Błąd `Port 8080 was already in use`**  
    Jeśli w tle działa inna usługa na porcie 8080, najszybciej zmienić `server.port: 8081` w `src/main/resources/application.yml`.
