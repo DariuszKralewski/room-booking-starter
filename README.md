@@ -20,6 +20,12 @@ Repozytorium startowe do przedmiotu **Programowanie aplikacji webowych w Javie**
    - **Lista startowych sal (JSON):** http://localhost:8080/api/rooms
    - **Dokumentacja i konsola testowa Swagger UI:** http://localhost:8080/swagger-ui.html
 
+## Dokumentacja i materiały w repozytorium
+
+- **[INSTRUKCJA.md](./INSTRUKCJA.md)** — przewodnik laboratoryjny krok po kroku dla studentów wraz z opisem architektury, zadaniami (Zadania 1–6 + zadanie dodatkowe), podpowiedziami oraz checklistą odbioru.
+- **[room-booking-starter.md](./room-booking-starter.md)** — szczegółowa dokumentacja techniczna szkieletu projektu startowego (omówienie pliku `pom.xml`, konfiguracji `application.yml`, wszystkich warstw aplikacji, rekordów DTO oraz pliku testowego `api-tests.http`).
+- **[SCENARIUSZ_ZAJEC.md](./SCENARIUSZ_ZAJEC.md)** — konspekt i harmonogram prowadzenia 3-godzinnych (180 min) zajęć laboratoryjnych minuta po minucie (dla prowadzącego: plan bloków, live coding, checkpointy oraz najczęstsze problemy techniczne).
+
 ## Struktura projektu
 
 ```text
@@ -41,7 +47,3 @@ src/main/java/pl/lab/roombooking/
 └── service/
     └── RoomService.java               # Logika biznesowa i mapowanie Model <-> DTO
 ```
-
-## Instrukcja laboratoryjna
-
-Pełny przewodnik krok po kroku wraz z wyjaśnieniem architektury oraz listą zadań do wykonania znajduje się w pliku **[INSTRUKCJA.md](./INSTRUKCJA.md)**.
