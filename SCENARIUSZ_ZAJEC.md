@@ -8,9 +8,8 @@
 
 ## Przygotowanie przed zajęciami (5 minut)
 
-1. Rozpakuj archiwum `room-booking-starter` i wypchnij jego zawartość do publicznego repozytorium na GitHubie.
-2. Udostępnij studentom link do repozytorium na tablicy lub platformie zajęciowej.
-3. Studenci nie potrzebują dodatkowych materiałów — pełna instrukcja krok po kroku znajduje się w pliku **`INSTRUKCJA.md`** wewnątrz repozytorium.
+1. Udostępnij studentom link do repozytorium na tablicy lub platformie zajęciowej.
+2. Studenci nie potrzebują dodatkowych materiałów — pełna instrukcja krok po kroku znajduje się w pliku **`INSTRUKCJA.md`** wewnątrz repozytorium.
 
 ---
 
@@ -33,7 +32,7 @@
 
 ### Blok 2: Live Coding — wspólne wykonanie Zadania 1 (0:30 – 0:55 | 25 min)
 
-Wykonaj **Zadanie 1 (`GET /api/rooms/{id}`)** wspólnie ze studentami na rzutniku, aby przełamać barierę wejścia i pokazać pełny cykl pracy w projekcie:
+Wykonaj **Zadanie 1 (`GET /api/rooms/{id}`)** wspólnie ze studentami pokazać pełny cykl pracy w projekcie:
 1. Otwórz `InMemoryRoomRepository` i dopisz `findById` (`Optional.ofNullable(storage.get(id))`).
 2. Przejdź do `RoomService` i dopisz `getRoomById` (`.map(RoomResponse::from)`).
 3. Przejdź do `RoomController` i napisz metodę z `@GetMapping("/{id}")` oraz `@PathVariable Long id`. Pokaż różnicę między zwróceniem `200 OK` a `404 Not Found` (`ResponseEntity.notFound().build()`).
